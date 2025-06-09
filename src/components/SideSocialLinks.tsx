@@ -2,7 +2,7 @@ import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
 
 export const SideSocialLinks = () => {
   return (
-    <div className="fixed bottom-0 left-10 hidden md:block">
+    <div className="fixed bottom-0 left-20 hidden md:block">
       <ul className="flex flex-col items-center gap-6 after:h-[90px] after:w-[1px] after:bg-white after:block after:mt-6">
         <li>
           <a

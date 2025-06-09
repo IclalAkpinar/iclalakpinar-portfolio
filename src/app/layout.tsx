@@ -1,7 +1,3 @@
-import { Footer } from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import { SideEmailLink } from "@/components/SideEmailLink";
-import { SideSocialLinks } from "@/components/SideSocialLinks";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -17,13 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`$ antialiased`}>
-        <Navbar />
-        {children}
-        <SideSocialLinks />
-        <SideEmailLink />
-        <Footer />
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

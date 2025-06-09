@@ -1,7 +1,51 @@
-export default function Home() {
+"use client";
+
+import { Footer } from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { SideEmailLink } from "@/components/SideEmailLink";
+import { SideSocialLinks } from "@/components/SideSocialLinks";
+import { Welcome } from "@/components/Welcome";
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+interface PageProps {}
+
+export default function Home({}: PageProps) {
+  const [showContent, setShowContent] = useState<boolean>(false);
+
+  const sideElementClasses = `
+    fixed bottom-0 z-40 
+    transition-opacity duration-700 delay-[800ms]
+    ${showContent ? "opacity-100" : "opacity-0"}
+  `;
+
   return (
-    <main className="min-h-screen flex items-center justify-left">
-      <div className=" p-4 text-white rounded-lg">Home Page</div>
-    </main>
+    <>
+      <Welcome onComplete={() => setShowContent(true)} />
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={showContent ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="relative min-h-screen w-full"
+      >
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <Navbar />
+        </div>
+
+        <main className="min-h-screen w-full pt-24"></main>
+
+        <div className="relative z-30">
+          <Footer />
+        </div>
+
+        <div className={`${sideElementClasses}`}>
+          <SideSocialLinks />
+        </div>
+
+        <div className={`${sideElementClasses}`}>
+          <SideEmailLink />
+        </div>
+      </motion.div>
+    </>
   );
 }
