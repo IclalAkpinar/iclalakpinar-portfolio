@@ -1,8 +1,9 @@
+import { Footer } from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { SideEmailLink } from "@/components/SideEmailLink";
+import { SideSocialLinks } from "@/components/SideSocialLinks";
 import type { Metadata } from "next";
 import "./globals.css";
-import { SideSocialLinks } from "@/components/SideSocialLinks";
-import { SideEmailLink } from "@/components/SideEmailLink";
 
 export const metadata: Metadata = {
   title: "İclal Akpınar",
@@ -21,6 +22,7 @@ export default function RootLayout({
         {children}
         <SideSocialLinks />
         <SideEmailLink />
+        <Footer />
       </body>
     </html>
   );
