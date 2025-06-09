@@ -1,6 +1,8 @@
 export const IndividualData = {
   name: "İclal Akpınar",
   title: "Computer Engineer",
+  description:
+    "I'm a computer engineer specialized in building exceptional web applications and digital experiences.",
   icon: "IA",
   phone: "+90 551 944 2404",
   mail: "iclalakpinar2404@gmail.com",

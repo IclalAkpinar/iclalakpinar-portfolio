@@ -1,4 +1,5 @@
 "use client";
+
 import useScroll from "@/hooks/useScroll";
 import { IndividualData } from "@/models/individual.data";
 import Image from "next/image";
@@ -19,7 +20,17 @@ const NavItem = ({ href, label }: { href: string; label: string }) => (
 export default function Navbar() {
   const [sideBarOpen, setSideBarOpen] = useState(false);
   const [navbarshow, setNavbarShow] = useState<boolean>(true);
+  const [scrollY, setScrollY] = useState(0);
   const scroll = useScroll();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (scroll.y > 300 && scroll.y - scroll.lastY > 0) setNavbarShow(false);
@@ -30,7 +41,7 @@ export default function Navbar() {
     <div
       className={`w-full duration-300 py-4 z-50 fixed ${
         navbarshow ? "top-0" : "-top-24"
-      } ${window.scrollY > 300 && "bg-[#0a0a0a] backdrop-blur-sm shadow"}`}
+      } ${scrollY > 300 ? "bg-[#0a0a0a] backdrop-blur-sm shadow" : ""}`}
     >
       <SideBar open={sideBarOpen} close={() => setSideBarOpen(false)} />
       <div className="h-[60px] w-full flex items-center justify-center">

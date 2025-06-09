@@ -1,6 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import { SideEmailLink } from "@/components/SideEmailLink";
 import { SideSocialLinks } from "@/components/SideSocialLinks";
@@ -32,7 +33,9 @@ export default function Home({}: PageProps) {
           <Navbar />
         </div>
 
-        <main className="min-h-screen w-full pt-24"></main>
+        <main className="min-h-screen w-full pt-24">
+          <Hero isVisible={showContent} />
+        </main>
 
         <div className="relative z-30">
           <Footer />
