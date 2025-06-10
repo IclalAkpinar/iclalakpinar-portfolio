@@ -10,7 +10,7 @@ import { SideBar } from "./Sidebar";
 const NavItem = ({ href, label }: { href: string; label: string }) => (
   <a
     href={href}
-    className="group cursor-pointer text-[16px] md:text-[20px] duration-200"
+    className="group cursor-pointer text-[16px] lg:text-[20px] duration-200"
   >
     <span className="px-2 text-white">{label}</span>
     <div className="h-0.5 w-1 bg-transparent group-hover:w-full group-hover:bg-white duration-300" />

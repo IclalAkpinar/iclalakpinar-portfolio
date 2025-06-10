@@ -7,12 +7,18 @@ import { SideEmailLink } from "@/components/SideEmailLink";
 import { SideSocialLinks } from "@/components/SideSocialLinks";
 import { Welcome } from "@/components/Welcome";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface PageProps {}
 
 export default function Home({}: PageProps) {
   const [showContent, setShowContent] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (showContent) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [showContent]);
 
   const sideElementClasses = `
     fixed bottom-0 z-40 
@@ -33,7 +39,7 @@ export default function Home({}: PageProps) {
           <Navbar />
         </div>
 
-        <main className="min-h-screen w-full pt-24">
+        <main className="min-h-screen w-full pt-">
           <Hero isVisible={showContent} />
         </main>
 

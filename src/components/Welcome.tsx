@@ -26,7 +26,7 @@ export const Welcome = ({ onComplete }: { onComplete: () => void }) => {
               sequence={["WELCOME TO THE PORTFOLIO OF", () => handleComplete()]}
               wrapper="h1"
               speed={10}
-              className="text-xl md:text-3xl text-white font-light"
+              className="text-xl lg:text-3xl text-white font-light"
               cursor={true}
             />
           </div>
