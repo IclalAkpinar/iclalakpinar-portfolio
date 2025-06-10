@@ -39,7 +39,7 @@ export default function Home({}: PageProps) {
           <Navbar />
         </div>
 
-        <main className="min-h-screen w-full pt-">
+        <main className="min-h-screen w-full">
           <Hero isVisible={showContent} />
         </main>
 

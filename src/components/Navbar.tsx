@@ -45,7 +45,7 @@ export default function Navbar() {
     >
       <SideBar open={sideBarOpen} close={() => setSideBarOpen(false)} />
       <div className="h-[60px] w-full flex items-center justify-center">
-        <div className="w-[95vw] sm:w-[90vw] mx-auto h-full rounded-b-full flex items-center justify-between">
+        <div className="w-[90vw] sm:w-[90vw] mx-auto h-full rounded-b-full flex items-center justify-between">
           <a href="/">
             <label className="text-[35px] hover:scale-[1.03] font-bold duration-300 cursor-pointer">
               {IndividualData.icon}

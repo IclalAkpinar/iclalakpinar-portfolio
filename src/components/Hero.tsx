@@ -9,7 +9,7 @@ interface HeroProps {
 
 export const Hero = ({ isVisible }: HeroProps) => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 md:px-0 py-20 sm:py-0">
+    <section className="min-h-screen flex items-center justify-center px-4 md:px-0 py-20 md:py-0">
       <div
         className={`w-[90vw] lg:w-[78vw] max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center
         transition-all duration-500`}
@@ -51,10 +51,10 @@ export const Hero = ({ isVisible }: HeroProps) => {
           >
             {IndividualData.description}
           </p>
-          <div>
+          <div className="mt-10">
             <a
               href={`mailto:${IndividualData.mail}`}
-              className={`px-6 py-2.5 sm:px-8 sm:py-3 bg-white text-black rounded-full 
+              className={`px-4 py-2 sm:px-6 sm:py-3 bg-white text-black rounded-full 
   hover:bg-gray-200 transition-all duration-300 text-base sm:text-lg cursor-pointer
   delay-700 ${
     isVisible ? "translate-y-0 opacity-100" : "translate-y-24 opacity-0"
@@ -67,7 +67,7 @@ export const Hero = ({ isVisible }: HeroProps) => {
 
         {/* Right Column - Image */}
         <div
-          className={`relative aspect-square w-full max-w-[400px] mx-auto order-1 md:order-2
+          className={`relative aspect-square w-full max-w-[500px] mx-auto order-1 md:order-2
     transition-all duration-500 delay-300
     ${isVisible ? "translate-y-0 opacity-100" : "translate-y-24 opacity-0"}`}
         >

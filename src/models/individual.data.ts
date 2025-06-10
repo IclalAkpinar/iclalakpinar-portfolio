@@ -7,6 +7,6 @@ export const IndividualData = {
   phone: "+90 551 944 2404",
   mail: "iclalakpinar2404@gmail.com",
   instagram: "https://www.instagram.com/icll._/",
-  linkedin: "https://www.linkedin.com/in/İclalAkpınar/",
+  linkedin: "https://www.linkedin.com/in/iclal-akpınar-59992a234",
   github: "https://github.com/IclalAkpinar",
 };
