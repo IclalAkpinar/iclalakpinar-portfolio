@@ -38,6 +38,13 @@ const config: Config = {
         fadeIn: "fadeIn 0.5s ease-out",
         slideUp: "slideUp 0.8s ease-out",
       },
+      boxShadow: {
+        image: "inset 0 0 40px 20px rgba(0, 0, 0, 0.8)",
+      },
+      fontFamily: {
+        sans: ["Outfit", "sans-serif"],
+        display: ["Outfit", "sans-serif"],
+      },
     },
   },
   plugins: [],
