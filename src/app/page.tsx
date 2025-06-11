@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import { SideEmailLink } from "@/components/SideEmailLink";
 import { SideSocialLinks } from "@/components/SideSocialLinks";
+import { Skills } from "@/components/Skills";
 import { Welcome } from "@/components/Welcome";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -43,6 +44,7 @@ export default function Home({}: PageProps) {
         <main className="min-h-screen w-full">
           <Hero isVisible={showContent} />
           <About />
+          <Skills />
         </main>
 
         <div className="relative z-30">

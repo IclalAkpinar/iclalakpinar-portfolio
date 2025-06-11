@@ -2,15 +2,14 @@
 
 import { IndividualData } from "@/models/individual.data";
 import Image from "next/image";
+import { SectionHeading } from "./SectionHeading";
 
 export const About = () => {
   return (
     <section id="about" className="flex items-center justify-center">
-      <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto mb-40">
+      <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto mb-28">
         {/* Main heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">
-          About
-        </h2>
+        <SectionHeading title="About" />
 
         <div className="grid md:grid-cols-5 gap-12 items-center">
           {/* Left - Image (2/5 width) */}
