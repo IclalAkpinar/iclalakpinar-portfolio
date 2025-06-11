@@ -14,22 +14,24 @@ export const About = () => {
 
         <div className="grid md:grid-cols-5 gap-12 items-center">
           {/* Left - Image (2/5 width) */}
-          <div className="md:col-span-2 relative w-full aspect-square max-w-[400px] mx-auto md:mx-0">
+          <div className="md:col-span-2 relative w-full aspect-square max-w-[350px] mx-auto md:mx-0">
             <div
-              className="relative w-full h-full overflow-hidden rounded-[30px] shadow-lg border border-white/10
-              shadow-black/50 backdrop-blur-sm bg-gradient-to-b from-white/10 to-black/10"
+              className="absolute inset-0 w-full h-full overflow-hidden rounded-full shadow-lg border border-white/10
+    shadow-black/50 backdrop-blur-sm bg-gradient-to-b from-white/10 to-black/10"
             >
-              <Image
-                src="/home/about.png"
-                alt="About me image"
-                fill
-                sizes="(max-width: 768px) 100vw, 400px"
-                priority
-                quality={100}
-                className="object-cover"
-              />
-              {/* Overlay for shadow effect */}
-              <div className="absolute inset-0 shadow-[inset_0_0_30px_12px_rgba(0,0,0,0.6)] rounded-[30px]" />
+              <div className="relative w-full h-full transition-transform duration-300 hover:scale-110">
+                <Image
+                  src="/home/about.png"
+                  alt="About me image"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  priority
+                  quality={100}
+                  className="object-cover"
+                />
+                {/* Overlay for shadow effect */}
+                <div className="absolute inset-0 shadow-[inset_0_0_40px_12px_rgba(0,0,0,0.8)] rounded-full" />
+              </div>
             </div>
           </div>
           {/* Right - Text Content (3/5 width) */}
