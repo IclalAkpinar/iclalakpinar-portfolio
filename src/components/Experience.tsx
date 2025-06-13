@@ -20,7 +20,7 @@ export const Experience = () => {
                 <button
                   key={index}
                   onClick={() => setActiveJob(index)}
-                  className={`px-4 py-4 text-left text-2xl md:text-xl lg:text-2xl font-md rounded-lg w-[350px] md:w-[220px] lg:w-[340px] xl:w-[350px] 2xl:w-[360px]
+                  className={`px-4 py-4 text-left text-2xl md:text-xl lg:text-2xl font-medium rounded-lg w-[350px] md:w-[220px] lg:w-[340px] xl:w-[350px] 2xl:w-[360px]
                     ${
                       activeJob === index
                         ? "text-white border-2 border-white/70 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
@@ -36,7 +36,7 @@ export const Experience = () => {
           <div className="min-h-[300px] w-full">
             <div className="space-y-6">
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-medium text-white">
                   {IndividualData.experience.jobs[activeJob].position}
                 </h3>
                 <p className="text-lg text-gray-400">
