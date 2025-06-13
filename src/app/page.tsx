@@ -1,6 +1,7 @@
 "use client";
 
 import { About } from "@/components/About";
+import { Education } from "@/components/Education";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -45,6 +46,7 @@ export default function Home({}: PageProps) {
           <Hero isVisible={showContent} />
           <About />
           <Skills />
+          <Education />
         </main>
 
         <div className="relative z-30">

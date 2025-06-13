@@ -40,15 +40,16 @@ export const IndividualData = {
         ],
       },
     ],
-    skills: [
-      "JavaScript (ES6+)",
-      "TypeScript",
-      "React.js",
-      "Next.js",
-      "Node.js",
-      "TailwindCSS",
-      "Git & GitHub",
-      "RESTful APIs",
+  },
+  education: {
+    title: "Education",
+    schools: [
+      {
+        name: "Konya Food and Agriculture University",
+        degree: "Bachelor's Degree in Computer Engineering",
+        duration: "2020 - 2025",
+        GPA: "3.56/4.00",
+      },
     ],
   },
 };
