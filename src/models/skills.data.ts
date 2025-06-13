@@ -35,7 +35,7 @@ export const SkillsData: Skill[] = [
   { icon: SiHtml5, name: "HTML5", color: "#E34F26" },
   { icon: SiCss3, name: "CSS3", color: "#1572B6" },
   { icon: SiReact, name: "React", color: "#61DAFB" },
-  { icon: SiNextdotjs, name: "Next.js", color: "#000000" },
+  { icon: SiNextdotjs, name: "Next.js", color: "#4C566A" },
   { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
 
   { icon: SiTailwindcss, name: "Tailwind", color: "#06B6D4" },
@@ -43,8 +43,8 @@ export const SkillsData: Skill[] = [
   { icon: SiAntdesign, name: "Ant Design", color: "#0170FE" },
 
   { icon: SiGit, name: "Git", color: "#F05032" },
-  { icon: SiGithub, name: "GitHub", color: "#181717" },
-  { icon: SiVercel, name: "Vercel", color: "#000000" },
+  { icon: SiGithub, name: "GitHub", color: "#6e5494" },
+  { icon: SiVercel, name: "Vercel", color: "#5F6C72" },
   { icon: SiDocker, name: "Docker", color: "#2496ED" },
   { icon: SiPostman, name: "Postman", color: "#FF6C37" },
   { icon: SiJira, name: "JIRA", color: "#0052CC" },

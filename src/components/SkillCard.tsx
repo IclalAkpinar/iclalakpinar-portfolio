@@ -12,7 +12,7 @@ export const SkillCard = ({ icon: Icon, name, color }: SkillCardProps) => {
   return (
     <div
       className="group relative bg-black border-2 border-white/10 rounded-xl p-4
-       transition-all duration-300 aspect-square"
+       transition-all duration-300 aspect-square hover:shadow-md hover:shadow-white/10"
     >
       <div className="flex flex-col items-center justify-center h-full gap-3">
         <Icon
