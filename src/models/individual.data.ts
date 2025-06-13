@@ -52,4 +52,36 @@ export const IndividualData = {
       },
     ],
   },
+  experience: {
+    title: "Experience",
+    jobs: [
+      {
+        company: "Kapsül Technology Platform",
+        position: "Front-End Developer",
+        type: "Part-Time",
+        duration: " February 2024 – Present",
+        description: [
+          "I am currently working as a Front-End Web Developer at Kapsül Technology Platform. I have gained hands-on experience in rojects using React, TypeScript, and Tailwind CSS. During this time, I have improved my ability to write clean, maintainable code and collaborate effectively within a team. My work in this field is ongoing.",
+        ],
+      },
+      {
+        company: "Konya Science Center",
+        position: "Computer Engineer",
+        type: "Part-Time",
+        duration: " January 2024 – February 2024",
+        description: [
+          "I worked as a Project Assistant at Konya Science Center. I contributed to projects related to artificial intelligence, which helped me enhance my knowledge and experience in the field.During my time at the science center, I also had the opportunity to improve my social skills and gained a deeper understanding of the importance of teamwork.",
+        ],
+      },
+      {
+        company: "Belya Bilişim",
+        position: "Web Developer",
+        type: "Internship",
+        duration: " July 2023 – October 2023",
+        description: [
+          "I worked in the IT department at Belya Information Technologies. I gained experience in modern technologies such as SQL, C#, MVC, ASP.Net, multi-layered architecture, and Entity Framework. I developed websites using these technologies. Additionally, I gained insights into the industry, learned the dynamics of teamwork, and  developed a strong sense of work discipline.",
+        ],
+      },
+    ],
+  },
 };
