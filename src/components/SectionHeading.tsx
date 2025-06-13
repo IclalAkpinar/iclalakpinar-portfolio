@@ -14,7 +14,7 @@ export const SectionHeading = ({
 
   return (
     <h2
-      className={`text-4xl md:text-5xl font-bold text-white ${className}`}
+      className={`text-4xl md:text-6xl font-bold text-white ${className}`}
       style={{ marginBottom }}
     >
       {title}
