@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
+"use client";
+import { Footer } from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { SideEmailLink } from "@/components/SideEmailLink";
+import { SideSocialLinks } from "@/components/SideSocialLinks";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "İclal Akpınar",
-  description: "İclal Akpınar's Personal Portfolio Website",
-};
 
 export default function RootLayout({
   children,
@@ -19,7 +18,17 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="min-h-screen">
+          <Navbar />
+
+          {children}
+        </div>
+        <SideSocialLinks />
+
+        <SideEmailLink />
+        <Footer />
+      </body>
     </html>
   );
 }

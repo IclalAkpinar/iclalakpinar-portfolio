@@ -12,7 +12,6 @@ export const Footer = () => {
 
   return (
     <>
-      {/* Contact info section - visible only on md and larger screens */}
       <div className="lg:hidden w-full bg-black text-white">
         <div className="w-[95vw] sm:w-[90vw] mx-auto flex flex-col sm:flex-row sm:justify-between items-center gap-y-1 sm:gap-y-4 py-3">
           <div className="flex flex-col items-center gap-y-2 sm:gap-y-0">

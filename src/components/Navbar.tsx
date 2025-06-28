@@ -41,7 +41,11 @@ export default function Navbar() {
     <div
       className={`w-full duration-300 py-4 z-50 fixed ${
         navbarshow ? "top-0" : "-top-24"
-      } ${scrollY > 300 ? "bg-black/50 backdrop-blur-sm" : ""}`}
+      } ${
+        scrollY > 300
+          ? "bg-black/50 backdrop-blur-sm"
+          : "bg-black/40 backdrop-blur-sm"
+      }`}
     >
       <SideBar open={sideBarOpen} close={() => setSideBarOpen(false)} />
       <div className="h-[60px] w-full flex items-center justify-center">
