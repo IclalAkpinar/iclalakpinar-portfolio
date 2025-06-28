@@ -21,9 +21,7 @@ export const About = () => {
                   src="/home/about.png"
                   alt="About me image"
                   fill
-                  sizes="(max-width: 768px) 100vw, 400px"
                   priority
-                  quality={100}
                   className="object-cover"
                 />
                 <div className="absolute inset-0 shadow-[inset_0_0_40px_12px_rgba(0,0,0,0.8)] rounded-full" />

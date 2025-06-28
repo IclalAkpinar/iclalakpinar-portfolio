@@ -12,19 +12,18 @@ export const Education = () => {
       <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto">
         <SectionHeading title="Education" />
 
-        <div className="grid md:grid-cols-[280px_1fr] lg:grid-cols-[300px_1fr] xl:grid-cols-[320px_1fr] 2xl:grid-cols-[340px_1fr] gap-12 w-full">
+        <div className="grid md:grid-cols-[220px_1fr] lg:grid-cols-[340px_1fr] xl:grid-cols-[350px_1fr] 2xl:grid-cols-[360px_1fr] gap-12 w-[340px_1fr]">
           <div className="flex flex-col space-y-4">
             <div className="inline-flex flex-col space-y-4">
               {IndividualData.education.schools.map((school, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveSchool(index)}
-                  className={`px-8 py-5 text-left md:text-xl lg:text-2xl font-medium rounded-lg
-                    w-[280px] md:w-[280px] lg:w-[300px] xl:w-[320px] 2xl:w-[340px]
+                  className={`px-4 py-4 text-left text-2xl md:text-xl lg:text-2xl font-medium rounded-lg w-[350px] md:w-[220px] lg:w-[340px] xl:w-[350px] 2xl:w-[360px]
                     ${
                       activeSchool === index
-                        ? "text-white border-2 border-solid border-white/40 shadow-sm shadow-white/10 rounded-lg"
-                        : "text-gray-400 hover:text-white border-2 border-transparent hover:border-white/50 shadow-[0_0_10px_rgba(255,255,255,0.05)]"
+                        ? "text-white border-2 border-solid border-white/40 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+                        : "text-gray-400 hover:text-white border-2 border-transparent hover:border-white/20 shadow-[0_0_10px_rgba(255,255,255,0.05)]"
                     }`}
                 >
                   {school.name}
