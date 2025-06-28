@@ -8,11 +8,11 @@ export const Experience = () => {
   const [activeJob, setActiveJob] = useState(0);
 
   return (
-    <section className="flex items-center justify-center w-full pb-20">
+    <section className="flex items-center justify-center w-full pb-12">
       <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto">
         <SectionHeading title="Experience" />
 
-        <div className="mt-12 grid md:grid-cols-[220px_1fr] lg:grid-cols-[340px_1fr] xl:grid-cols-[350px_1fr] 2xl:grid-cols-[360px_1fr] gap-16 w-[340px_1fr]">
+        <div className="grid md:grid-cols-[220px_1fr] lg:grid-cols-[340px_1fr] xl:grid-cols-[350px_1fr] 2xl:grid-cols-[360px_1fr] gap-12 w-[340px_1fr]">
           <div className="flex flex-col space-y-4">
             <div className="inline-flex flex-col space-y-4">
               {IndividualData.experience.jobs.map((job, index) => (

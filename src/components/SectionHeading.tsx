@@ -9,13 +9,11 @@ export const SectionHeading = ({
   className = "",
   mb = 12,
 }: SectionHeadingProps) => {
-  // Convert margin value to rem for more precise control
   const marginBottom = `${mb * 0.25}rem`;
 
   return (
     <h2
-      className={`text-4xl md:text-6xl font-bold text-white ${className}`}
-      style={{ marginBottom }}
+      className={`text-5xl md:text-6xl font-bold text-white mb-8 md:mb-12 ${className}`}
     >
       {title}
     </h2>

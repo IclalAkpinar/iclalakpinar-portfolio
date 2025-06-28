@@ -7,13 +7,11 @@ import { SectionHeading } from "./SectionHeading";
 export const About = () => {
   return (
     <section id="about" className="flex items-center justify-center">
-      <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto mb-28">
-        {/* Main heading */}
+      <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto mb-8 lg:mb-20">
         <SectionHeading title="About" />
 
-        <div className="grid md:grid-cols-5 gap-12 items-center">
-          {/* Left - Image (2/5 width) */}
-          <div className="md:col-span-2 relative w-full aspect-square max-w-[350px] mx-auto md:mx-0">
+        <div className="grid lg:grid-cols-5 gap-10 items-center">
+          <div className="lg:col-span-2 relative w-full aspect-square max-w-[350px] mx-auto lg:mx-0">
             <div
               className="absolute inset-0 w-full h-full overflow-hidden rounded-full shadow-lg border border-white/10
     shadow-black/50 backdrop-blur-sm bg-gradient-to-b from-white/10 to-black/10"
@@ -28,21 +26,16 @@ export const About = () => {
                   quality={100}
                   className="object-cover"
                 />
-                {/* Overlay for shadow effect */}
                 <div className="absolute inset-0 shadow-[inset_0_0_40px_12px_rgba(0,0,0,0.8)] rounded-full" />
               </div>
             </div>
           </div>
-          {/* Right - Text Content (3/5 width) */}
-          <div className="md:col-span-3 space-y-6">
-            {/* Mini heading */}
+          <div className="lg:col-span-3 space-y-6">
             <p className="text-sm uppercase tracking-[0.2em] text-gray-400 font-light ">
               {IndividualData.about.title}
             </p>
 
-            {/* Paragraphs with sections */}
             <div className="space-y-8 text-gray-300 text-lg leading-relaxed">
-              {/* Introduction */}
               <div className="space-y-6">
                 {IndividualData.about.paragraphs.map((paragraph, index) => (
                   <p key={index}>

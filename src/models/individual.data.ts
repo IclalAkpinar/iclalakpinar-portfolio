@@ -31,7 +31,7 @@ export const IndividualData = {
         ],
       },
       {
-        text: "Beyond coding, I enjoy extreme sports like skydiving and paragliding. This mindset helps me approach technical challenges differently, while photography and exploring fuel my creativity.",
+        text: "Beyond coding, I enjoy extreme sports like skydiving and paragliding. This mindset helps me approach technical challenges differently, while photography, exploring, and recording podcasts fuel my creativity.",
         highlights: [
           "extreme sports",
           "skydiving",

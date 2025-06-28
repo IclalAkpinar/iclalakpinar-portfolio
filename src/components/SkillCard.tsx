@@ -16,7 +16,7 @@ export const SkillCard = ({ icon: Icon, name, color }: SkillCardProps) => {
     >
       <div className="flex flex-col items-center justify-center h-full gap-3">
         <Icon
-          className="text-4xl md:text-5xl text-gray-300 transition-colors duration-300 group-hover:text-[var(--icon-color)]"
+          className="text-2xl md:text-5xl text-gray-300 transition-colors duration-300 group-hover:text-[var(--icon-color)]"
           style={{ ["--icon-color" as string]: color }}
         />
         <h3 className="text-sm text-gray-300 group-hover:text-white font-medium transition-colors text-center">

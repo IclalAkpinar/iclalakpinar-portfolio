@@ -8,7 +8,7 @@ import { SkillCard } from "./SkillCard";
 export const Skills = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
-  const scrollPosRef = useRef(0); // Keep track of scroll position
+  const scrollPosRef = useRef(0);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -33,24 +33,25 @@ export const Skills = () => {
   }, [isPaused]);
 
   return (
-    <section className="flex items-center justify-center py-0 md:py-20">
+    <section className="flex items-center justify-center py-0 md:py-20 w-full p-4 md:p-0">
       <div className="w-full mx-auto ">
-        <SectionHeading title="Technical Skills" mb={16} />
+        <SectionHeading title="Technical Skills" />
 
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-black to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-black to-transparent z-10" />
 
           <div
             ref={scrollRef}
-            className="flex overflow-x-hidden gap-6 pb-4" // Increased gap between cards
+            className="flex overflow-x-hidden gap-4 md:gap-6 pb-12 md:pb-0"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
             {[...SkillsData, ...SkillsData].map((skill, index) => (
-              <div key={index} className="flex-none w-[150px]">
-                {" "}
-                {/* Increased card width */}
+              <div
+                key={index}
+                className="flex-none w-[100px] md:w-[120px] lg:w-[140px]"
+              >
                 <SkillCard
                   icon={skill.icon}
                   name={skill.name}

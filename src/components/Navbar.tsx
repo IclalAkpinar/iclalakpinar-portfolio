@@ -2,8 +2,8 @@
 import useScroll from "@/hooks/useScroll";
 import { IndividualData } from "@/models/individual.data";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import menu from "../../public/icons/menu.svg";
 import { SideBar } from "./Sidebar";
 
@@ -44,7 +44,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Hydration sonrası pathname'i active link olarak set et
   useEffect(() => {
     setMounted(true);
     setActiveLink(pathname);
@@ -65,10 +64,10 @@ export default function Navbar() {
   }, [scroll.y, scroll.lastY]);
 
   const handleLinkClick = (e: React.MouseEvent, href: string) => {
-    e.preventDefault(); // Varsayılan link davranışını engelle
-    setActiveLink(href); // Önce state'i güncelle
+    e.preventDefault();
+    setActiveLink(href);
     setTimeout(() => {
-      router.push(href); // Sonra navigate et
+      router.push(href);
     }, 0);
   };
 
@@ -83,7 +82,7 @@ export default function Navbar() {
       }`}
     >
       <SideBar open={sideBarOpen} close={() => setSideBarOpen(false)} />
-      <div className="h-[60px] w-full flex items-center justify-center">
+      <div className="h-[32px] w-full flex items-center justify-center">
         <div className="w-[90vw] sm:w-[90vw] mx-auto h-full rounded-b-full flex items-center justify-between">
           <a href="/">
             <label className="text-[35px] hover:scale-[1.03] font-bold duration-300 cursor-pointer">
@@ -108,8 +107,8 @@ export default function Navbar() {
             loading="lazy"
             src={menu}
             onClick={() => setSideBarOpen(true)}
-            width={36}
-            height={36}
+            width={32}
+            height={32}
             alt="menu icon"
             className="w-9 sm:hidden"
           />

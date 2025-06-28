@@ -9,12 +9,11 @@ interface HeroProps {
 
 export const Hero = ({ isVisible }: HeroProps) => {
   return (
-    <section className="min-h-0 sm:min-h-screen flex items-center justify-center px-4 md:px-0 py-0">
+    <section className="min-h-0 sm:min-h-screen flex items-center justify-center px-4 md:px-0 py-20 md:py-0">
       <div
         className={`w-full mx-auto grid md:grid-cols-2 gap-12 items-center
         transition-all duration-500`}
       >
-        {/* Left Column - Text Content */}
         <div className="space-y-6 text-center md:text-left order-2 md:order-1">
           <h1
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white
@@ -65,7 +64,6 @@ export const Hero = ({ isVisible }: HeroProps) => {
           </div>
         </div>
 
-        {/* Right Column - Image */}
         <div
           className={`relative aspect-square w-full max-w-[500px] mx-auto order-1 md:order-2
     transition-all duration-500 delay-300
@@ -81,7 +79,6 @@ export const Hero = ({ isVisible }: HeroProps) => {
                 className="object-cover"
               />
             </div>
-            {/* Shadow overlay */}
             <div className="absolute inset-0 rounded-full shadow-image pointer-events-none" />
           </div>
         </div>
