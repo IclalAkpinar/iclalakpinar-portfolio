@@ -9,9 +9,9 @@ interface HeroProps {
 
 export const Hero = ({ isVisible }: HeroProps) => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 md:px-0 py-20 md:py-0">
+    <section className="min-h-0 sm:min-h-screen flex items-center justify-center px-4 md:px-0 py-0">
       <div
-        className={`w-[90vw] lg:w-[78vw] max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center
+        className={`w-full mx-auto grid md:grid-cols-2 gap-12 items-center
         transition-all duration-500`}
       >
         {/* Left Column - Text Content */}

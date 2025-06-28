@@ -48,7 +48,7 @@ export const IndividualData = {
         name: "Konya Food and Agriculture University",
         degree: "Bachelor's Degree in Computer Engineering",
         duration: "2020 - 2025",
-        GPA: "3.56/4.00",
+        GPA: "3.52/4.00",
       },
     ],
   },

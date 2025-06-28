@@ -33,8 +33,8 @@ export const Skills = () => {
   }, [isPaused]);
 
   return (
-    <section className="flex items-center justify-center py-20">
-      <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto">
+    <section className="flex items-center justify-center py-0 md:py-20">
+      <div className="w-full mx-auto ">
         <SectionHeading title="Technical Skills" mb={16} />
 
         <div className="relative">

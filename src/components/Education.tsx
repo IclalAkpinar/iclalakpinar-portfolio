@@ -8,7 +8,7 @@ export const Education = () => {
   const [activeSchool, setActiveSchool] = useState(0);
 
   return (
-    <section className="flex items-center justify-center py-20 w-full">
+    <section className="flex items-center justify-center pb-28 w-full">
       <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto">
         <SectionHeading title="Education" />
 
@@ -24,7 +24,7 @@ export const Education = () => {
                     w-[280px] md:w-[280px] lg:w-[300px] xl:w-[320px] 2xl:w-[340px]
                     ${
                       activeSchool === index
-                        ? "text-white border-2 border-white/70 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+                        ? "text-white border-2 border-solid border-white/40 shadow-sm shadow-white/10 rounded-lg"
                         : "text-gray-400 hover:text-white border-2 border-transparent hover:border-white/50 shadow-[0_0_10px_rgba(255,255,255,0.05)]"
                     }`}
                 >
@@ -35,7 +35,7 @@ export const Education = () => {
           </div>
 
           {/* School Details */}
-          <div className="min-h-[300px] w-full">
+          <div className="min-h-[20px] w-full">
             <div className="space-y-6">
               <div className="space-y-2">
                 <h3 className="text-2xl font-medium text-white">
