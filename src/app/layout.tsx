@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={outfit.variable}>
-      <body className="min-h-screen font-sans">
+      <body className="min-h-screen font-sans bg-black text-white">
         <Navbar />
         {children}
         <SideSocialLinks />

@@ -14,33 +14,35 @@ export const Hero = ({ isVisible }: HeroProps) => {
         className={`w-full mx-auto grid md:grid-cols-2 gap-12 items-center
         transition-all duration-500`}
       >
-        <div className="space-y-6 text-center md:text-left order-2 md:order-1">
-          <h1
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white
+        <div className="text-center md:text-left order-2 md:order-1">
+          <div className="space-y-5">
+            <h1
+              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white
             transition-all duration-500 delay-100
             ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-24 opacity-0"
             }`}
-          >
-            {IndividualData.name}
-          </h1>
+            >
+              {IndividualData.name}
+            </h1>
 
-          <h2
-            className={`text-xl sm:text-2xl md:text-3xl text-gray-200 font-light
+            <h2
+              className={`text-xl sm:text-2xl md:text-3xl text-gray-200 font-light
             transition-all duration-500 delay-300
             ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-24 opacity-0"
             }`}
-          >
-            {IndividualData.title}
-          </h2>
+            >
+              {IndividualData.title}
+            </h2>
+          </div>
 
           <p
-            className={`text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto md:mx-0
+            className={`my-2 text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto md:mx-0
             transition-all duration-500 delay-500
             ${
               isVisible
