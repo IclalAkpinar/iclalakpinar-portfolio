@@ -16,7 +16,7 @@ export default function PortfolioDetailPage({ params }: Props) {
   return <PortfolioDetailClient project={project} />;
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return portfolioData.map((project) => ({
     slug: project.slug,
   }));
