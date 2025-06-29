@@ -15,7 +15,7 @@ export const achievements: AchievementItem[] = [
     description:
       "Finalist in the Tourism Technologies category with our RouteAI project, which aims to bring innovative solutions to the tourism sector.",
     date: "September 2024",
-    image: "/achievements/teknofest.png",
+    image: "/achievements/teknofest.webp",
     badge: "RouteAI",
     path: "/portfolio/routeai",
   },
@@ -25,7 +25,7 @@ export const achievements: AchievementItem[] = [
     description:
       "Achieved 3rd place as a finalist in the web hackathon with the Benim Kampüsüm app, designed to improve campus life for students.",
     date: "May 2025",
-    image: "/achievements/webhackathon.png",
+    image: "/achievements/webhackathon.webp",
     badge: "Benim Kampüsüm",
     path: "/portfolio/benimkampusum",
   },
@@ -35,7 +35,7 @@ export const achievements: AchievementItem[] = [
     description:
       "Won 3rd Prize at the Social Innovation Impact Program, a KOSGEB-supported hackathon focused on developing impactful solutions for society.",
     date: "June 2024",
-    image: "/achievements/sia.png",
+    image: "/achievements/sia.webp",
     badge: "Social Innovation",
   },
   {
@@ -45,7 +45,7 @@ export const achievements: AchievementItem[] = [
       "Our RouteAI project was awarded technical consultancy and mentoring support by Mevlana Development Agency for its innovative approach.",
 
     date: "February 2024",
-    image: "/achievements/mevka.png",
+    image: "/achievements/mevka.webp",
     badge: "RouteAI Project",
   },
 ];

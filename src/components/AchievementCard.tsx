@@ -16,7 +16,7 @@ export default function AchievementCard({ data }: { data: AchievementItem }) {
     <div className="w-full max-w-[3000px] mx-auto bg-white/5 border-2 border-solid border-white/40 shadow-sm shadow-white/10 rounded-lg flex flex-col justify-between">
       <div className="relative px-2 pt-2 pb-2 flex flex-col sm:flex-row gap-4 min-w-[200px] h-full">
         {data.date && (
-          <span className="absolute top-2 right-2 text-white text-xs px-2 py-1 rounded-full z-20 font-semibold">
+          <span className="absolute bottom-2 right-2 sm:top-2 sm:right-2 text-white text-xs px-2 py-1 rounded-full z-20 font-semibold">
             {data.date}
           </span>
         )}
@@ -44,12 +44,12 @@ export default function AchievementCard({ data }: { data: AchievementItem }) {
             (data.path ? (
               <button
                 onClick={handleBadgeClick}
-                className="absolute bottom-0 md:bottom-2 right-0 md:right-2 bg-white/5 text-white text-xs md:text-sm font-semibold px-2 md:px-3 py-1 rounded-lg z-20 shadow hover:bg-white-8"
+                className="absolute bottom-0 sm:bottom-2 left-0 sm:left-auto sm:right-2 bg-white/5 text-white text-xs lg:text-sm font-semibold px-2 lg:px-3 py-1 rounded-lg z-20 shadow hover:bg-white-8 w-auto max-w-fit"
               >
                 {data.badge}
               </button>
             ) : (
-              <span className="absolute bottom-0 md:bottom-2 right-0 md:right-2 bg-white/5 text-white text-xs md:text-sm font-semibold px-2 md:px-3 py-1 rounded-lg z-20 shadow hover:bg-white-8">
+              <span className="absolute bottom-0 sm:bottom-2 left-0 sm:left-auto sm:right-2 bg-white/5 text-white text-xs lg:text-sm font-semibold px-2 md:px-3 py-1 rounded-lg z-20 shadow hover:bg-white-8 w-auto max-w-fit">
                 {data.badge}
               </span>
             ))}
