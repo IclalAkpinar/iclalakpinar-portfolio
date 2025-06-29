@@ -43,14 +43,14 @@ export const Skills = () => {
 
           <div
             ref={scrollRef}
-            className="flex overflow-x-hidden gap-4 md:gap-6 pb-12 md:pb-0"
+            className="flex overflow-x-auto scrollbar-hide gap-4 md:gap-6 pb-0 md:pb-0 cursor-grab"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
             {[...SkillsData, ...SkillsData].map((skill, index) => (
               <div
                 key={index}
-                className="flex-none w-[100px] md:w-[120px] lg:w-[140px]"
+                className="flex-none w-[90px] md:w-[120px] lg:w-[140px]"
               >
                 <SkillCard
                   icon={skill.icon}
