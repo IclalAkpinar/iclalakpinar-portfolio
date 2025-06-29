@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import mail from "../../public/icons/mail.svg";
 import phone from "../../public/icons/phone.svg";
 import { SocialMedia } from "./SocialMedia";
+import Link from "next/link";
 
 export const Footer = () => {
   const navigate = useRouter();
@@ -62,12 +63,12 @@ export const Footer = () => {
       {/* Credit line - visible on all screen sizes */}
       <div className="lg:border-none border-t-[1px] bg-black text-white/70 text-center border-solid border-white/20 py-2 text-[12px]">
         Designed & Built by{" "}
-        <a
+        <Link
           href="/"
           className="font-bold text-white pl-1 hover:text-gray-300 transition-colors duration-200"
         >
           {IndividualData.name}
-        </a>
+        </Link>
       </div>
     </>
   );
