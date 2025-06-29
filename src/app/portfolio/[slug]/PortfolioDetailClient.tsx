@@ -51,13 +51,11 @@ export default function PortfolioDetailClient({ project }: Props) {
                 className="w-full aspect-[16/9] object-cover rounded-lg border-[1px] border-solid border-white/20 transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
               />
-              {/* Sadece ikonun arkasında blur ve koyu arka plan */}
               <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/80 hover:bg-black/90 backdrop-blur-md rounded-full p-2 flex items-center justify-center">
                   <ZoomIn className="w-5 h-5 text-white" />
                 </div>
               </div>
-              {/* Tüm görselde koyu blur efekti */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 pointer-events-none" />
             </div>
           ))}
@@ -92,22 +90,19 @@ export default function PortfolioDetailClient({ project }: Props) {
         </p>
       </div>
 
-      {/* Modal */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           onClick={closeModal}
         >
           <div className="relative max-w-6xl max-h-[85vh] w-full h-full flex items-center justify-center">
-            {/* Close button */}
             <button
               onClick={closeModal}
-              className="absolute -top-2 -right-2 z-10 bg-white/10 backdrop-blur-md hover:bg-white/20 rounded-full p-3 transition-colors duration-200"
+              className="absolute -top-12 -right-2 z-10 bg-white/10 backdrop-blur-md hover:bg-white/20 rounded-full p-3 transition-colors duration-200"
             >
               <X className="w-6 h-6 text-white" />
             </button>
 
-            {/* Image */}
             <Image
               src={selectedImage}
               width={1080}

@@ -1,23 +1,8 @@
-import Image from "next/image";
 import { useRouter } from "next/navigation";
-import arrowIcon from "../../public/icons/arrow.svg";
 
 const dashed = () => {
   return (
     <div className="group-hover:block flex-grow  hidden h-[0.2px] mx-1.5" />
-  );
-};
-
-const arrow = () => {
-  return (
-    <Image
-      src={arrowIcon}
-      loading="lazy"
-      alt="Arrow icon"
-      width={4}
-      height={4}
-      className="size-4 hidden group-hover:block duration-300 group-hover:animate-slideRight "
-    />
   );
 };
 
@@ -32,10 +17,8 @@ const Title = (
   const handleClick = () => {
     close();
     if (isCV) {
-      // CV için yeni sekmede aç
       window.open(navigate, "_blank", "noopener,noreferrer");
     } else {
-      // Diğer linkler için normal navigasyon
       navigator.push(navigate);
     }
   };
@@ -49,12 +32,7 @@ const Title = (
       }`}
     >
       {content}
-      {navigate && (
-        <>
-          {dashed()}
-          {arrow()}
-        </>
-      )}
+      {navigate && <>{dashed()}</>}
     </a>
   );
 };

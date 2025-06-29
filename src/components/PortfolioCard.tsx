@@ -19,7 +19,7 @@ export default function PortfolioCard({ data }: { data: PortfolioItem }) {
             src={data.image[0]}
             alt={data.title + " image"}
             fill
-            className="object-cover rounded-lg"
+            className="object-cover"
             loading="lazy"
             quality={60}
             sizes="(max-width: 640px) 100vw, 40vw"
