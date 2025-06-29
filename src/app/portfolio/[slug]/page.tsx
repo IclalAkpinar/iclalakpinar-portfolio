@@ -2,12 +2,18 @@ import { portfolioData } from "@/models/portfolio";
 import { notFound } from "next/navigation";
 import PortfolioDetailClient from "./PortfolioDetailClient";
 
-interface Props {
-  params: { slug: string };
+interface Params {
+  slug: string;
 }
 
-export default function PortfolioDetailPage({ params }: Props) {
-  const project = portfolioData.find((item) => item.slug === params.slug);
+interface Props {
+  params: Promise<Params>;
+}
+
+export default async function PortfolioDetailPage({ params }: Props) {
+  const { slug } = await params;
+
+  const project = portfolioData.find((item) => item.slug === slug);
 
   if (!project) {
     return notFound();
@@ -16,7 +22,7 @@ export default function PortfolioDetailPage({ params }: Props) {
   return <PortfolioDetailClient project={project} />;
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return portfolioData.map((project) => ({
     slug: project.slug,
   }));
