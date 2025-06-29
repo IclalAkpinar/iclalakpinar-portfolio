@@ -21,15 +21,28 @@ const arrow = () => {
   );
 };
 
-const Title = (content: string, navigate: string, close: () => void) => {
+const Title = (
+  content: string,
+  navigate: string,
+  close: () => void,
+  isCV?: boolean
+) => {
   const navigator = useRouter();
+
+  const handleClick = () => {
+    close();
+    if (isCV) {
+      // CV için yeni sekmede aç
+      window.open(navigate, "_blank", "noopener,noreferrer");
+    } else {
+      // Diğer linkler için normal navigasyon
+      navigator.push(navigate);
+    }
+  };
 
   return (
     <a
-      onClick={() => {
-        close();
-        navigator.push(navigate);
-      }}
+      onClick={handleClick}
       rel={content + "link"}
       className={`group flex items-center justify-between duration-300 text-white hover:text-white px-2 py-1 rounded-xl text-[24px] font-bold ${
         navigate && "cursor-pointer   hover:bg-white/15"
@@ -50,7 +63,7 @@ export const SidebarBody = ({ close }: { close: () => void }) => {
   return (
     <div className=" w-full flex flex-col gap-y-4 px-2 py-6  flex-grow">
       {Title("Portfolio", "/portfolio", close)}
-      {Title("CV", "/cv", close)}
+      {Title("CV", "/cv/İclalAkpınar.pdf", close, true)}
     </div>
   );
 };
