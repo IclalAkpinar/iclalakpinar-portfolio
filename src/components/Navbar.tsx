@@ -2,6 +2,7 @@
 import useScroll from "@/hooks/useScroll";
 import { IndividualData } from "@/models/individual.data";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import menu from "../../public/icons/menu.svg";
@@ -84,11 +85,11 @@ export default function Navbar() {
       <SideBar open={sideBarOpen} close={() => setSideBarOpen(false)} />
       <div className="h-[32px] w-full flex items-center justify-center">
         <div className="w-[90vw] sm:w-[90vw] mx-auto h-full rounded-b-full flex items-center justify-between">
-          <a href="/">
+          <Link href="/">
             <label className="text-[35px] hover:scale-[1.03] font-bold duration-300 cursor-pointer">
               {IndividualData.icon}
             </label>
-          </a>
+          </Link>
           <div className="sm:flex hidden items-center space-x-6">
             <NavItem
               href="/portfolio"
