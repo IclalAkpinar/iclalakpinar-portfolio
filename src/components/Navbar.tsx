@@ -13,7 +13,7 @@ const NavItem = ({
   active,
   onClick,
 }: {
-  href: string;
+  href?: string;
   label: string;
   active?: boolean;
   onClick?: (e: React.MouseEvent) => void;
@@ -96,12 +96,15 @@ export default function Navbar() {
               active={mounted && activeLink === "/portfolio"}
               onClick={(e) => handleLinkClick(e, "/portfolio")}
             />
-            <NavItem
-              href="/cv"
-              label="CV"
-              active={mounted && activeLink === "/cv"}
-              onClick={(e) => handleLinkClick(e, "/cv")}
-            />
+            <a
+              href="/cv/İclalAkpınar.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group cursor-pointer text-[16px] lg:text-[20px] duration-200"
+            >
+              <span className="px-2 text-white">CV</span>
+              <div className="h-0.5 duration-300 w-1 bg-transparent group-hover:w-full group-hover:bg-white" />
+            </a>
           </div>
           <Image
             loading="lazy"
