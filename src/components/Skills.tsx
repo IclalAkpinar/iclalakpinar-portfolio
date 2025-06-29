@@ -8,33 +8,107 @@ import { SkillCard } from "./SkillCard";
 export const Skills = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
+  const [isUserScrolling, setIsUserScrolling] = useState(false);
   const scrollPosRef = useRef(0);
+  const animationRef = useRef<number | null>(null);
+
+  const checkScrollPosition = () => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    const scrollWidth = scrollContainer.scrollWidth;
+    const containerWidth = scrollContainer.clientWidth;
+    const maxScroll = scrollWidth - containerWidth;
+    const halfWidth = scrollWidth / 2;
+
+    if (scrollContainer.scrollLeft >= halfWidth) {
+      scrollContainer.scrollLeft = scrollContainer.scrollLeft - halfWidth;
+      scrollPosRef.current = scrollContainer.scrollLeft;
+    } else if (scrollContainer.scrollLeft <= 0) {
+      scrollContainer.scrollLeft = halfWidth;
+      scrollPosRef.current = scrollContainer.scrollLeft;
+    }
+  };
+
+  const scroll = () => {
+    if (!scrollRef.current || isPaused || isUserScrolling) {
+      animationRef.current = requestAnimationFrame(scroll);
+      return;
+    }
+
+    scrollPosRef.current += 1;
+    scrollRef.current.scrollLeft = scrollPosRef.current;
+
+    checkScrollPosition();
+
+    animationRef.current = requestAnimationFrame(scroll);
+  };
+
+  useEffect(() => {
+    animationRef.current = requestAnimationFrame(scroll);
+
+    return () => {
+      if (animationRef.current !== null) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isPaused, isUserScrolling]);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    const scrollWidth = scrollContainer.scrollWidth;
+    let userScrollTimeout: NodeJS.Timeout;
 
-    const scroll = () => {
-      if (!scrollContainer || isPaused) return;
-
-      scrollPosRef.current += 3;
-      if (scrollPosRef.current >= scrollWidth / 2) {
-        scrollPosRef.current = 0;
-      }
-
-      scrollContainer.scrollLeft = scrollPosRef.current;
+    const handleUserScrollStart = () => {
+      setIsUserScrolling(true);
+      clearTimeout(userScrollTimeout);
     };
 
-    const intervalId = setInterval(scroll, 30);
+    const handleUserScrollEnd = () => {
+      clearTimeout(userScrollTimeout);
+      userScrollTimeout = setTimeout(() => {
+        setIsUserScrolling(false);
+        scrollPosRef.current = scrollContainer.scrollLeft;
+      }, 150);
+    };
 
-    return () => clearInterval(intervalId);
-  }, [isPaused]);
+    const handleScroll = () => {
+      checkScrollPosition();
+    };
+
+    const handleWheel = () => {
+      handleUserScrollStart();
+      clearTimeout(userScrollTimeout);
+      userScrollTimeout = setTimeout(() => {
+        setIsUserScrolling(false);
+        scrollPosRef.current = scrollContainer.scrollLeft;
+      }, 300);
+    };
+
+    scrollContainer.addEventListener("touchstart", handleUserScrollStart);
+    scrollContainer.addEventListener("touchend", handleUserScrollEnd);
+    scrollContainer.addEventListener("scroll", handleScroll);
+
+    scrollContainer.addEventListener("mousedown", handleUserScrollStart);
+    scrollContainer.addEventListener("mouseup", handleUserScrollEnd);
+
+    scrollContainer.addEventListener("wheel", handleWheel);
+
+    return () => {
+      scrollContainer.removeEventListener("touchstart", handleUserScrollStart);
+      scrollContainer.removeEventListener("touchend", handleUserScrollEnd);
+      scrollContainer.removeEventListener("scroll", handleScroll);
+      scrollContainer.removeEventListener("mousedown", handleUserScrollStart);
+      scrollContainer.removeEventListener("mouseup", handleUserScrollEnd);
+      scrollContainer.removeEventListener("wheel", handleWheel);
+      clearTimeout(userScrollTimeout);
+    };
+  }, []);
 
   return (
-    <section className="flex items-center justify-center py-0 md:py-20 w-full p-4 md:p-0">
-      <div className="w-full mx-auto ">
+    <section className="flex items-center justify-center pb-12 md:py-20 w-full p-4 md:p-0">
+      <div className="w-full mx-auto">
         <SectionHeading title="Technical Skills" />
 
         <div className="relative">
@@ -46,19 +120,25 @@ export const Skills = () => {
             className="flex overflow-x-auto scrollbar-hide gap-4 md:gap-6 pb-0 md:pb-0 cursor-grab"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
+            style={{
+              touchAction: "pan-x",
+              WebkitOverflowScrolling: "touch",
+            }}
           >
-            {[...SkillsData, ...SkillsData].map((skill, index) => (
-              <div
-                key={index}
-                className="flex-none w-[90px] md:w-[120px] lg:w-[140px]"
-              >
-                <SkillCard
-                  icon={skill.icon}
-                  name={skill.name}
-                  color={skill.color}
-                />
-              </div>
-            ))}
+            {[...SkillsData, ...SkillsData, ...SkillsData].map(
+              (skill, index) => (
+                <div
+                  key={index}
+                  className="flex-none w-[100px] md:w-[120px] lg:w-[140px]"
+                >
+                  <SkillCard
+                    icon={skill.icon}
+                    name={skill.name}
+                    color={skill.color}
+                  />
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>
