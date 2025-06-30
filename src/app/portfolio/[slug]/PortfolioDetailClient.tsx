@@ -98,7 +98,7 @@ export default function PortfolioDetailClient({ project }: Props) {
           <div className="relative max-w-6xl max-h-[85vh] w-full h-full flex items-center justify-center">
             <button
               onClick={closeModal}
-              className="absolute -top-12 -right-2 z-10 bg-white/10 backdrop-blur-md hover:bg-white/20 rounded-full p-3 transition-colors duration-200"
+              className="absolute -top-4 -right-2 z-10 bg-white/10 backdrop-blur-md hover:bg-white/20 rounded-full p-3 transition-colors duration-200"
             >
               <X className="w-6 h-6 text-white" />
             </button>
