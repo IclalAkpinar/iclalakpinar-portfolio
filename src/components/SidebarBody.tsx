@@ -41,7 +41,7 @@ export const SidebarBody = ({ close }: { close: () => void }) => {
   return (
     <div className=" w-full flex flex-col gap-y-4 px-2 py-6  flex-grow">
       {Title("Portfolio", "/portfolio", close)}
-      {Title("CV", "/cv/İclalAkpınar.pdf", close, true)}
+      {Title("CV", "/cv/İclalAkpınarCV.pdf", close, true)}
     </div>
   );
 };
