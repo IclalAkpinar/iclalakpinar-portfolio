@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import menu from "../../public/icons/menu.svg";
+const menu = "/icons/menu.svg";
 import { SideBar } from "./Sidebar";
 
 const NavItem = ({
@@ -98,7 +98,7 @@ export default function Navbar() {
               onClick={(e) => handleLinkClick(e, "/portfolio")}
             />
             <a
-              href="/cv/İclalAkpınar.pdf"
+              href="/cv/İclalAkpınarCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group cursor-pointer text-[16px] lg:text-[20px] duration-200"
