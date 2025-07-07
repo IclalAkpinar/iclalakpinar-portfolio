@@ -6,9 +6,11 @@ import { SidebarHeader } from "./SidebarHeader";
 export const SideBar = ({
   open,
   close,
+  onCvClick,
 }: {
   open: boolean;
   close: () => void;
+  onCvClick?: () => void;
 }) => {
   return (
     <ConfigProvider
@@ -42,7 +44,7 @@ export const SideBar = ({
         className=" max-h-screen"
       >
         <SidebarHeader close={close} />
-        <SidebarBody close={close} />
+        <SidebarBody close={close} onCvClick={onCvClick} />
       </Drawer>
     </ConfigProvider>
   );

@@ -4,7 +4,6 @@ import { IndividualData } from "@/models/individual.data";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import mail from "../../public/icons/mail.svg";
-import phone from "../../public/icons/phone.svg";
 import { SocialMedia } from "./SocialMedia";
 import Link from "next/link";
 
@@ -41,20 +40,6 @@ export const Footer = () => {
                 alt="mail logo"
               />
               {IndividualData.mail}
-            </a>
-            <a
-              className="flex items-center gap-2 cursor-pointer text-[15px] font-bold text-white hover:text-gray-300 transition-colors duration-200"
-              href={`tel:${IndividualData.phone}`}
-            >
-              <Image
-                src={phone}
-                loading="lazy"
-                width={32}
-                height={32}
-                className="w-[20px]"
-                alt="phone logo"
-              />
-              {IndividualData.phone}
             </a>
           </div>
         </div>
