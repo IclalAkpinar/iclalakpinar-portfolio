@@ -13,7 +13,20 @@ export const Education = () => {
         <div className="w-full">
           {IndividualData.education.schools.map((school, idx) => (
             <div key={idx} className="mb-12">
-              <h2 className="text-4xl font-extrabold text-white mb-2">{school.name}</h2>
+              {school.link ? (
+                <a
+                  href={school.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl md:text-4xl font-extrabold text-white mb-2 inline-block hover:underline"
+                >
+                  {school.name}
+                </a>
+              ) : (
+                <h2 className="text-2xl md:text-4xl font-extrabold text-white mb-2">
+                  {school.name}
+                </h2>
+              )}
               <div className="space-y-2">
                 <h3 className="text-xl font-medium text-white">{school.degree}</h3>
                 <p className="text-lg text-gray-400">{school.duration}</p>

@@ -1,10 +1,12 @@
+import { li } from "framer-motion/client";
+import { link } from "fs";
+
 export const IndividualData = {
   name: "İclal Akpınar",
   title: "Computer Engineer",
   description:
     "I'm a computer engineer specialized in building exceptional web applications and digital experiences.",
   icon: "IA",
-  phone: "+90 551 944 2404",
   mail: "iclalakpinar2404@gmail.com",
   instagram: "https://www.instagram.com/icll._/",
   linkedin: "https://www.linkedin.com/in/iclal-akpınar-59992a234",
@@ -46,6 +48,7 @@ export const IndividualData = {
     schools: [
       {
         name: "Konya Food and Agriculture University",
+        link: "https://gidatarim.edu.tr/",
         degree: "Bachelor's Degree in Computer Engineering",
         duration: "2020 - 2025",
         GPA: "3.52/4.00",
@@ -57,6 +60,7 @@ export const IndividualData = {
     jobs: [
       {
         company: "Kapsül Technology Platform",
+        link: "https://www.kapsul.org.tr/",
         position: "Front-End Developer",
         type: "Part-Time",
         duration: " February 2024 – Present",
@@ -66,6 +70,7 @@ export const IndividualData = {
       },
       {
         company: "Konya Science Center",
+        link: "https://www.konyabilimmerkezi.com/",
         position: "Computer Engineer",
         type: "Part-Time",
         duration: " January 2024 – February 2024",
@@ -75,6 +80,7 @@ export const IndividualData = {
       },
       {
         company: "Belya Bilişim",
+        link: "https://www.belya.com.tr/",
         position: "Web Developer",
         type: "Internship",
         duration: " July 2023 – October 2023",

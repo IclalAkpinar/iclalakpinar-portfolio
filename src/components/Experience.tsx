@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -7,13 +6,11 @@ import { SectionHeading } from "./SectionHeading";
 
 export const Experience = () => {
   const [activeJob, setActiveJob] = useState(0);
-  // Ekran boyutunu kontrol etmek için state
   const [isMobile, setIsMobile] = useState(false);
 
-  // Ekran boyutunu dinle
   React.useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // md: 768px
+      setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
     window.addEventListener("resize", checkMobile);
@@ -24,11 +21,23 @@ export const Experience = () => {
     <section className="flex items-center justify-center w-full pb-12">
       <div className="w-[90vw] lg:w-[78vw] max-w-7xl mx-auto">
         <SectionHeading title="Experience" />
-
         <div className="w-full">
           {IndividualData.experience.jobs.map((job, idx) => (
             <div key={idx} className="mb-12">
-              <h2 className="text-4xl font-extrabold text-white mb-2">{job.company}</h2>
+              {job.link ? (
+                <a
+                  href={job.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl md:text-4xl font-extrabold text-white mb-2 inline-block hover:underline"
+                >
+                  {job.company}
+                </a>
+              ) : (
+                <h2 className="text-2xl md:text-4xl font-extrabold text-white mb-2">
+                  {job.company}
+                </h2>
+              )}
               <div className="space-y-2">
                 <h3 className="text-xl font-medium text-white">{job.position}</h3>
                 <p className="text-lg text-gray-400">{job.duration}</p>
