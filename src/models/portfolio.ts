@@ -57,6 +57,7 @@ export const portfolioData: PortfolioItem[] = [
       "/portfolio/kapsul-management.png",
       "/portfolio/kapsul-management-2.png",
     ],
+    link: "https://yonetim.kapsul.org.tr/",
     path: "/portfolio/kapsul-management",
     technologies: [
       "React.js",
