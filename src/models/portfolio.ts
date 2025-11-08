@@ -169,6 +169,43 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: 9,
+    title: "Kapsul Events",
+    description:
+    "This project is a single-page application built with React and TypeScript. It features a responsive and consistent UI using Tailwind CSS, lightweight global state management with Zustand, and a centralized API configuration based on Axios. It employs React Router with lazy loading for code splitting, reusable components (Card, Modal), theme and language preference storage via localStorage, lazy-loaded images, and basic SEO optimization using react-helmet. The architecture follows a clear separation of components, containers, and layouts, with performance-focused optimizations to ensure scalability and maintainability." ,
+    image: ["/portfolio/event.png", "/portfolio/event2.png"],
+    path: "/portfolio/events",
+    technologies: [ 
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Antd",
+      "Zustand",
+      "Axios",
+      "React Router",
+      "React Helmet",
+    ],
+    slug: "events",
+  },
+  {
+    id: 10,
+    title: "Kapsül News & Reviews",
+    description:"This project, News & Reviews, is a single-page application built with React and TypeScript. It features a responsive and consistent UI using Tailwind CSS, lightweight global state management with Zustand, and a centralized API configuration based on Axios. It employs React Router with lazy loading for code splitting, reusable components (Card, Modal), theme and language preference storage via localStorage, lazy-loaded images, and basic SEO optimization using react-helmet. The architecture follows a clear separation of components, containers, and layouts, with performance-focused optimizations to ensure scalability and maintainability.",
+    image: ["/portfolio/news.png", "/portfolio/news2.png"],
+    path: "/portfolio/news",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Antd",
+      "Zustand",
+      "Axios",
+      "React Router",
+      "React Helmet",
+    ],
+    slug: "news",
+  },
+  {
+    id: 11,
     title: "RouteAI - AI Powered Travel Guide App",
     description:
       "RouteAI is an AI-powered travel guide app designed to personalize and optimize travel experiences. Initially started as an entrepreneurial venture, this project involved comprehensive research both on the software development side and in terms of market feasibility. Every aspect of the app, from technology choices to user experience design, was backed by thorough analysis and testing to ensure it met both technical standards and commercial potential. Built with React Native and Expo, the app integrates Firebase for user authentication and real-time database management. The modern user interface (UI) enhances the user experience, while Gemini AI provides tailored travel recommendations. React Navigation ensures seamless navigation through Stack and Tab Navigation. The project was deeply researched to ensure both its technical robustness and its commercial viability. I actively contributed to frontend development and AI integration, making sure the solution is not only scalable but also effectively aligned with user needs and market expectations.",
@@ -185,7 +222,7 @@ export const portfolioData: PortfolioItem[] = [
     slug: "routeai",
   },
   {
-    id: 10,
+    id: 12,
     title: "MIPS Assembly Simulator",
     description:
       "As part of the Computer Organization course, I developed a web-based MIPS simulator that allows users to write and execute MIPS assembly code directly in the browser while observing how each instruction affects the register and memory states in real time. Built using HTML, CSS, and JavaScript, the system parses the user’s input, converts each instruction into its corresponding 32-bit machine code, and simulates execution step by step. The simulator supports a wide range of MIPS instruction types—including arithmetic, logical, memory access, comparison, branching, and function call operations—along with label resolution and control flow handling. By bridging low-level architecture concepts with an interactive web interface, this project provides a practical and visual way to explore and understand MIPS instruction execution and processor behavior.     ",
@@ -195,7 +232,7 @@ export const portfolioData: PortfolioItem[] = [
     slug: "mips",
   },
   {
-    id: 11,
+    id: 13,
     title: "Five Lane Traffic Light System – Verilog Based Digital Design",
     description:
       "In this project, I designed a traffic light system for a five-lane road as part of the Digital Design course. Using Verilog, I created a digital circuit that controls the red (R) and green (G) light states for each traffic light. During the simulation process, the transition between red and green lights for each lamp was ensured with accurate timing. Signals like a, b, c, d, db, dc, and dd control the state of each traffic light, while RST (Reset) and CLK (Clock) signals played a crucial role in resetting the circuit and providing the necessary timing. The RST signal resets the circuit to its initial state, while the CLK signal ensures proper timing for the system's operation. The simulation, conducted using the iSim tool, validated that all signals transitioned correctly within their specified time intervals. This project provided me with valuable experience in digital system design and verification, and it allowed me to practically explore Verilog's robust timing control capabilities. Additionally, I observed how simulation tools can be used to ensure design accuracy. Oracle VM VirtualBox and Project Navigator were critical in providing the virtualized environment and managing the Verilog project compilation and simulation.",
